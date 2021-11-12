@@ -6,4 +6,5 @@ if (-not (Test-Path ".\$Year")) {
 
 for ($i = 1; $i -le 25; $i++) {
     New-Item -ItemType Directory -Name "Day $i" -Path ".\$Year"
+    New-Item  -ItemType File -Name "Day $i.ps1" -Path ".\$Year\Day $i"
 }
