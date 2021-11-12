@@ -1,5 +1,5 @@
 # This is how it is going :-)
-|Day|Part 1|Part 2|
+|**Day**|**Part 1**|**Part 2**|
 |--|:--:|:--:|
 |Day 1| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 2| :heavy_minus_sign: | :heavy_minus_sign: |
