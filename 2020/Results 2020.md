@@ -1,7 +1,7 @@
 # This is how it is going :-)
 |**Day**|**Part 1**|**Part 2**|
 |--|:--:|:--:|
-|Day 1| :gold_star: | :gold_star: |
+|Day 1| :star: | :star2: |
 |Day 2| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 3| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 4| :heavy_minus_sign: | :heavy_minus_sign: |
