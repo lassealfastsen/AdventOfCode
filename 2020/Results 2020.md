@@ -6,7 +6,7 @@
 |Day 3| :star: | :star: |107,4834|
 |Day 4| :star: | :star: |90,1054|
 |Day 5| :star: | :star: |171,0833|
-|Day 6| :heavy_minus_sign: | :heavy_minus_sign: ||
+|Day 6| :star: | :star: |436,0679|
 |Day 7| :heavy_minus_sign: | :heavy_minus_sign: ||
 |Day 8| :heavy_minus_sign: | :heavy_minus_sign: ||
 |Day 9| :heavy_minus_sign: | :heavy_minus_sign: ||
