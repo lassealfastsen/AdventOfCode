@@ -23,14 +23,14 @@ foreach ($num in $expenseReport) {
 
 
 #Part 2
-foreach ($num in $expenseReport) {
+:loop foreach ($num in $expenseReport) {
     $sumRemainders = 2020-[int]$num
     foreach ($remainder1 in ($expenseReport | Where-Object {($_ -ne $num)})) {
         $remainder2 = $sumRemainders-$remainder1
         if ($expenseReport -contains $remainder2) {
             Write-Host "The correct numbers are $num, $remainder1 and $remainder2"
             Write-Host "The answer is $($num*$remainder1*$remainder2)"
-            break
+            break loop
         }
     }
 }

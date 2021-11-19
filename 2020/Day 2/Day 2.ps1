@@ -1060,10 +1060,10 @@ foreach ($password in $inputpasswords) {
 
     if (Test-PasswordValidity $min $max $char $pass) {
         $validPasswords++
-        Write-Host $password -ForegroundColor Green
-    } else {
-        Write-Host $password -ForegroundColor Red
-    }
+        #Write-Host $password -ForegroundColor Green
+    } #else {
+        #Write-Host $password -ForegroundColor Red
+    #}
 
 }
 
