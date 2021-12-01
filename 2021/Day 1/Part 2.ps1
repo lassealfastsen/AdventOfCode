@@ -3,18 +3,21 @@
 [int[]]$sums = @()
 
 
-
-for ($i = 2; $i -lt $lines.Count; $i++) {
-    $sums += $lines[$i]+$lines[$i-1]+$lines[$i-2]
-}
-
 $increases = 0
 
-for ($i = 1; $i -le $sums.Count; $i++) {
-    if ($sums[$i] -gt $sums[$i-1]) {
-        $increases++
-    }
+
+for ($i = 3; $i -lt $lines.Count; $i++) {
+    $suma = $lines[$i-1]+$lines[$i-2]+$lines[$i-3]
+    $sumb = $lines[$i]+$lines[$i-1]+$lines[$i-2]
+    if ($sumb -gt $suma) {$increases++}
 }
+
+
+# for ($i = 1; $i -le $sums.Count; $i++) {
+#     if ($sums[$i] -gt $sums[$i-1]) {
+#         $increases++
+#     }
+# }
 
 
 $increases
