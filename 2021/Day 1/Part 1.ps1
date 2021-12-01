@@ -3,8 +3,8 @@
 
 $increases = 0
 
-for ($i = 1; $i -le ($lines | Measure-Object).Count; $i++) {
-    if ([int]$lines[$i] -gt [int]$lines[$i-1]) {
+for ($i = 1; $i -le $lines.Count; $i++) {
+    if ($lines[$i] -gt $lines[$i-1]) {
         $increases++
     }
 }

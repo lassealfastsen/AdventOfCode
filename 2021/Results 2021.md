@@ -1,7 +1,7 @@
 # This is how it is going :-)
 |**Day**|**Part 1**|**Part 2**|
 |--|:--:|:--:|
-|Day 1| :star: (8247,27ms) | :star: (9439,09ms)|
+|Day 1| :star: (74,4995ms) | :star: (692,2358ms)|
 |Day 2| :heavy_minus_sign: | :heavy_minus_sign: ||
 |Day 3| :heavy_minus_sign: | :heavy_minus_sign: ||
 |Day 4| :heavy_minus_sign: | :heavy_minus_sign: ||
