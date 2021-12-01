@@ -1,6 +1,6 @@
 [int[]]$lines = Get-Content '.\2021\Day 1\Input.txt'
 
-[int[]]$sums = @()
+#[int[]]$sums = @()
 
 
 $increases = 0
