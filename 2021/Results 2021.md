@@ -5,12 +5,12 @@
 |Day 2| :star: (4.7829ms) | :star: (4,8097ms) |
 |Day 3| :star: (40,2364ms) | :star: (50,3387ms)|
 |Day 4| :star: (939.8517ms) | :star: (5252.1426ms) |
-|Day 5| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 6| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 7| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 8| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 9| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 10| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 5| :star: | :star: |
+|Day 6| :star: | :star: |
+|Day 7| :star: | :star: |
+|Day 8| :star: | :star: |
+|Day 9| :star: | :heavy_minus_sign: |
+|Day 10| :star: | :star: |
 |Day 11| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 12| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 13| :heavy_minus_sign: | :heavy_minus_sign: |
