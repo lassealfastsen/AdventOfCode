@@ -48,6 +48,7 @@ $risklevels = @()
 for ($x = 0; $x -lt $grid.GetLength(1); $x++) {
     for ($y = 0; $y -le  $grid.GetLength(0); $y++) {
         if ($grid[$y,$x] -lt (Get-Neighbors -x $x -y $y | Sort | Select -First 1)) {
+            " - $($grid[$y,$x])"
             $risklevels += $grid[$y,$x]
         }
     }
