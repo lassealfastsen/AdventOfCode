@@ -61,9 +61,11 @@ $list.Add("0,0")
 $nodes["0,0"].distance=0
 
 $cost = 0
-
+$cnt = 0
 while ($list.Count -gt 0) {
     #$node.node
+    #$cnt++
+    #$cnt
     $node = $nodes[$list.First.Value]
     #if ($node.node -eq "$($xmax-1),$($ymax-1)") { break }
     $nodes[$node.Node].Visited = $true
@@ -74,6 +76,10 @@ while ($list.Count -gt 0) {
 
 
     #$neighbours = $neighbours.where{($_.Destination -notin $distances.Keys)}
+    $next = $null
+
+    
+
     foreach ($neighbour in $neighbours | Sort-Object Weight, Destination) {
         #if ($nodes["$xmax,$ymax"].Distance -lt [int]::MaxValue-1) {$nodes["$xmax,$ymax"]}
         # if ($node.node -eq "$xmax,$ymax") { 
@@ -85,11 +91,21 @@ while ($list.Count -gt 0) {
         }      
     }
 
-    
+
+     $arr = @()
+     $list  | ForEach-Object {
+         $arr += $nodes[$_]
+     }
+     $list = New-Object System.Collections.Generic.LinkedList[String]
+     $arr | Sort-Object Distance | ForEach-Object {
+         $null = $list.AddLast($_.Node)
+         #$_.Node
+     }
+     #$arr.Count
     #$list = $list.GetEnumerator() | Sort-Object
 
 }
 
-
+$nodes["$xmax,$ymax"].Distance
 #The answer is too high for some reason exactly the value of the Leas Weight Neibour of the destination don't know if this will work for part 2 :S
-($nodes["$xmax,$ymax"].Distance - ((Get-Neighbors "$xmax,$ymax").Weight | Sort | Select -First 1))
+#($nodes["$xmax,$ymax"].Distance - ((Get-Neighbors "$xmax,$ymax").Weight | Sort | Select -First 1))
