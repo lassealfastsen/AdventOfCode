@@ -12,12 +12,12 @@
 |Day 9| :star: | :star: |
 |Day 10| :star: | :star: |
 |Day 11| :star: | :star: |
-|Day 12| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 13| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 14| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 15| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 16| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 17| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 12| :star: | :star: |
+|Day 13| :star: | :star: |
+|Day 14| :star: | :star: |
+|Day 15| :star: | :star: |
+|Day 16| :star:* | :star:* |
+|Day 17| :star: | :star: |
 |Day 18| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 19| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 20| :heavy_minus_sign: | :heavy_minus_sign: |
@@ -26,3 +26,5 @@
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 24| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 25| :heavy_minus_sign: | :heavy_minus_sign: |
+
+\* The solution is stolen

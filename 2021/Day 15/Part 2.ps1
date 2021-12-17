@@ -8,28 +8,67 @@ $pth = ".\2021\day 15\input.txt"
 
 $reader = New-Object System.IO.StreamReader($pth)
 
-$x = 0
-$y = 0
-while (($read = $reader.Readline()) -ne $null) { 
-    for ($x = 0; $x -lt $read.Length; $x++) {
-        $nodes["$x,$y"] = @{
-            node = "$x,$y"
-            Weight=[int]::Parse([char]$read[$x])
-            Visited=$false
-            distance=[int]::MaxValue-1
-        }
+#Build The Grid from the input in a 2-dimentional array.
+
+$grid = New-Object 'int[,]' (100*5), (100*5)
+
+$y=0
+while (($read = $reader.readline()) -ne $null) {
+    for ($x =0; $x -lt $read.Length; $x++) {
+        $grid[$x, $y] = [int]::Parse([char]$read[$x])
     }
     $y++
 }
-
-$ymax = $y-1
-$xmax = $x-1
-
 
 $reader.Close()
 $reader.Dispose()
 
 
+#Generate the first column
+
+for ($i = 1; $i -lt 5; $i++) {
+    for ($y = 0; $y -lt 100; $y++) {
+        for ($x = 0; $x -lt 100; $x++) {
+            $val = $grid[$x,$y] + $i
+            if ($val -gt 9) {$val -=9}
+            $grid[$x, ($y+($i*100))] = $val
+        }
+    }
+}
+
+
+
+#Now Generate the remaining columns
+
+for ($y = 0; $y -lt $grid.GetLength(0); $y++) {
+    for ($i = 1; $i -lt 5; $i++) {
+        for ($x = 0; $x -lt 100; $x++) {
+            $val = $grid[$x,$y] + $i
+            if ($val -gt 9) {$val -= 9}
+            $grid[($x+($i*100)),$y]=$val
+        }        
+    }
+}
+
+
+
+#Generate the list so we can work with it..
+
+for ($x = 0; $x -lt $grid.GetLength(0); $x++) {
+    for ($y = 0; $y -lt $grid.GetLength(1); $y++) {
+        $nodes["$x,$y"] = @{
+            node = "$x,$y"
+            Weight=$grid[$x,$y]
+            Visited=$false
+            distance=[int]::MaxValue-1
+        }
+    }
+}
+
+
+
+$ymax = $grid.GetLength(1)
+$xmax = $grid.GetLength(0)
 
 
 
@@ -66,7 +105,6 @@ while ($list.Count -gt 0) {
     #$node.node
     $cnt++
     if ($cnt % 1000 -eq 0) {Write-Host $cnt}
-    
     $least = $list.First.Value
     $item = $list.First
     while (($item = $item.Next) -ne $null) {
@@ -97,4 +135,4 @@ while ($list.Count -gt 0) {
     }
 }
 
-$nodes["$xmax,$ymax"].Distance
+$nodes["$($xmax-1),$($ymax-1)"].Distance
