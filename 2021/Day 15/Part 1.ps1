@@ -3,7 +3,7 @@
 
 $nodes = @{}
 #
-$pth = ".\2021\day 15\input.txt"
+$pth = "C:\Users\lal\OneDrive - Lyngsoe Systems\Documents\github\AdventOfCode\AdventOfCode\2021\day 15\input.txt"
 
 
 $reader = New-Object System.IO.StreamReader($pth)
@@ -22,8 +22,8 @@ while (($read = $reader.Readline()) -ne $null) {
     $y++
 }
 
-$ymax = $y-1
-$xmax = $x-1
+$ymax = $y
+$xmax = $x
 
 
 $reader.Close()
@@ -64,9 +64,9 @@ $cost = 0
 $cnt = 0
 while ($list.Count -gt 0) {
     #$node.node
-    $cnt++
-    if ($cnt % 1000 -eq 0) {Write-Host $cnt}
-    
+    #$cnt++
+    #if ($cnt % 1000 -eq 0) {Write-Host $cnt}
+    if ($nodes["$($xmax),$($ymax)"].Visited) { break :loop }
     $least = $list.First.Value
     $item = $list.First
     while (($item = $item.Next) -ne $null) {
@@ -76,6 +76,8 @@ while ($list.Count -gt 0) {
     }
     #Select the Least Distance Node
     $node = $nodes[$least]
+
+    if ($least -eq "$xmax,$ymax") { break :loop }
 
     #set the node Visited to avoid ending up here again
     $nodes[$node.Node].Visited = $true
@@ -97,4 +99,6 @@ while ($list.Count -gt 0) {
     }
 }
 
-$nodes["$xmax,$ymax"].Distance
+
+$nodes["$($xmax-1),$($ymax-1)"].DIstance
+#$nodes["$xmax,$ymax"].Distance
