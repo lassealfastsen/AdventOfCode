@@ -21,7 +21,7 @@
 |Day 18| :star:*: | :star:* |
 |Day 19| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 20| :star: | _:star:_ |
-|Day 21| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 21| :star: | :star:* |
 |Day 22| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 24| :heavy_minus_sign: | :heavy_minus_sign: |
