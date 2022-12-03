@@ -3,7 +3,7 @@
 |--|:--:|:--:|
 |Day 1| :star: (11.67ms) | :star: (11.19ms)|
 |Day 2| :star: (12.57ms) | :star: (12.42ms) |
-|Day 3| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 3| :star: (8.96ms) | :star: (7.72ms) |
 |Day 4| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 5| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 6| :heavy_minus_sign: | :heavy_minus_sign: |
