@@ -5,7 +5,7 @@
 |Day 2| :star: (12.57ms) | :star: (12.42ms) |
 |Day 3| :star: (8.96ms) | :star: (7.72ms) |
 |Day 4| :star: (258.55ms) | :star: (258.55ms) |
-|Day 5| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 5| :star: (67.69ms) | :star: (42.51ms) |
 |Day 6| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 7| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 8| :heavy_minus_sign: | :heavy_minus_sign: |
