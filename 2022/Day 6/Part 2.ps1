@@ -10,4 +10,4 @@ while(!$found) {
     $pos++
 }
 
-$pos+1
+Write-Host "$($pos+1)"
