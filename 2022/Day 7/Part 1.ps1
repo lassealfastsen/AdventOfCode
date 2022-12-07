@@ -15,7 +15,7 @@ while ($null -ne ($read = $reader.ReadLine())) {
                     ".." {  
                         #Go Up One Level
                         $currentPath = $currentPath.Split('/')
-                        $currentPath = $currentPath | Select -First ($currentPath.Count - 2)
+                        $currentPath = $currentPath | Select-Object -First ($currentPath.Count - 2)
                         $currentPath = "$($currentPath -join '/')/"
                     }
                     "/" {  
@@ -47,7 +47,7 @@ while ($null -ne ($read = $reader.ReadLine())) {
         
         if ($currentPath -ne "/") {
             $parent = $currentPath
-            while (($parent = "$(($parent.Split('/') | Select -First ($parent.Split('/').Count - 2)) -join '/')/") -ne "/") {
+            while (($parent = "$(($parent.Split('/') | Select-Object -First ($parent.Split('/').Count - 2)) -join '/')/") -ne "/") {
                 $paths[$parent] += ([int]$read.Split(' ')[0])
             }
             $paths[$parent] += ([int]$read.Split(' ')[0])
