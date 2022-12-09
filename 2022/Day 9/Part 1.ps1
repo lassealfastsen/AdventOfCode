@@ -114,7 +114,7 @@ while ($null -ne ($read = $reader.ReadLine())) {
         Default { Write-Host "?????" }
     }
 }
-($tail.steps | select -Unique).Count + 1
+($tail.steps | Select-Object -Unique).Count + 1
 
 
 
