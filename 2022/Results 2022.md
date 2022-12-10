@@ -7,7 +7,7 @@
 |Day 4| :star: (258.55ms) | :star: (258.55ms) |
 |Day 5| :star: (67.69ms) | :star: (42.51ms) |
 |Day 6| :star: (79.97ms) | :star: (226.53ms) |
-|Day 7| :star: (154.72ms) | :star (154.59ms): |
+|Day 7| :star: (154.72ms) | :star: (154.59ms) |
 |Day 8| :star: (623.27ms) | :star: (805.38ms) |
 |Day 9| :star: (4858.91ms) | :star: (1625.53ms) |
 |Day 10| :star: (5.68ms) | :star: (12.09ms) |
