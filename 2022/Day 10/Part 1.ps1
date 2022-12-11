@@ -15,7 +15,7 @@ while ($null -ne ($read = $reader.ReadLine())) {
         } elseif ((($cycle - 20) % 40) -eq 0) {
             $signal += $cycle * $x
         }
-        
+        Write-Host "$cycle : $x"
         switch ($read) {
             "noop" { 
                 $cycle++
@@ -29,7 +29,6 @@ while ($null -ne ($read = $reader.ReadLine())) {
                     $x += $op
                     
                 }
-
                 $cycle++
             }
         }
