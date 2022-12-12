@@ -12,7 +12,7 @@
 |Day 9| :star: (4858.91ms) | :star: (1625.53ms) |
 |Day 10| :star: (5.68ms) | :star: (12.09ms) |
 |Day 11| :star: (31.29ms) | :star: (20017.72ms) |
-|Day 12| :star: (322.90ms) | :star: ()318.26ms | * Credit to https://github.com/rmbolger/AdventOfCode-PS/blob/main/2022/d12.ps1
+|Day 12*| :star: (322.90ms) | :star: (318.26ms) | 
 |Day 13| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 14| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 15| :heavy_minus_sign: | :heavy_minus_sign: |
@@ -26,3 +26,5 @@
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 24| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 25| :heavy_minus_sign: | :heavy_minus_sign: |
+
+* Credit to https://github.com/rmbolger/AdventOfCode-PS/blob/main/2022/d12.ps1
