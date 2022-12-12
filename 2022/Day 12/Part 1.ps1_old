@@ -1,0 +1,88 @@
+#Look at Day 12 in 2021 ;)
+$pth = 'C:\Users\lal\OneDrive - Lyngsoe Systems\Scripts\AdventOfCode\2022\Day 12\input.txt'
+
+$reader = New-Object System.IO.StreamReader($pth)
+#Import the grid
+
+$grid = @{}
+$y = 0
+
+$xmax = 0
+$ymax = 0
+$startpos = $null
+$endpos = $null
+
+while ($null -ne ($read = $reader.ReadLine())) {
+    $xmax = $read.Length - 1
+    $ymax = $y
+    for ($x = 0; $x -lt $Read.Length; $x++) {
+        $grid."$x-$y" = @{elevation = $read[$x]; value = ([int]([char]$read[$x]) - 96) }
+        if ($grid."$x-$y".elevation -ceq 'S') { $grid."$x-$y".Value = 1; $startpos = "$x-$y" }
+        if ($grid."$x-$y".elevation -ceq 'E') { $grid."$x-$y".Value = 26; $endpos = "$x-$y" }
+    }   
+    $y++
+}
+
+
+$reader.Close()
+$reader.Dispose()
+
+
+
+$queue = [System.Collections.Generic.List[string]]::new()
+
+$paths = [System.Collections.Generic.List[string]]::new()
+
+$visited = @{}
+
+$queue.add($startpos)
+
+while ($queue.Count -gt 0) {
+    #Process Queue Item
+
+    #Get Shortest Path
+
+#    $short = $queue | Sort-Object Length | select -First 1
+    $queue.Sort()
+
+    
+    $idx = 0
+
+    $current = $queue[$idx].split('/')[-1]
+    $currentPath = $queue[$idx]
+    $visited[$current] = 1
+    $coordinates = [int[]]($current).Split('-')
+    $queue.RemoveAt($idx)
+
+    if ($current -eq $endpos) {
+        $paths += $currentPath
+        break
+    }
+
+    $neighbours = [System.Collections.Generic.List[string]]::new()
+
+    if ($coordinates[0] -gt 0) {
+        $neighbours.Add("$($coordinates[0]-1)-$($coordinates[1])") #Left
+    }
+    if ($coordinates[0] -lt $xmax) {
+        $neighbours.Add("$($coordinates[0]+1)-$($coordinates[1])") #Right
+    }
+    if ($coordinates[1] -gt 0) {
+        $neighbours.Add("$($coordinates[0])-$($coordinates[1]-1)") #Up
+    }
+    if ($coordinates[1] -lt $ymax) {
+        $neighbours.Add("$($coordinates[0])-$($coordinates[1]+1)") #Down
+    }    
+
+
+    #husk lige at pille negative tal ud......
+
+    foreach ($neighbour in $neighbours) {
+        if (($grid[$neighbour].value -le $grid[$current].value + 1) -and (($visited[$neighbour] -ne 1))) {
+            $queue.Add("$currentPath/$neighbour")
+        }
+    }
+}
+ 
+($paths | Sort-Object Length | Select-Object -First 1).Split('/').COunt - 1
+
