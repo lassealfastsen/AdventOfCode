@@ -14,7 +14,7 @@
 |Day 11| :star: (31.29ms) | :star: (20017.72ms) |
 |Day 12 [^1]| :star: (322.90ms) | :star: (318.26ms) | 
 |Day 13| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 14| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 14| :star: (367.89ms) | :star: (12420.06ms) |
 |Day 15| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 16| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 17| :heavy_minus_sign: | :heavy_minus_sign: |
