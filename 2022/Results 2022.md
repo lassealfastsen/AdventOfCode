@@ -17,10 +17,10 @@
 |Day 14| :star: (367.89ms) | :star: (12420.06ms) |
 |Day 15| :star: (70894.96ms) | :star: (~90mins) |
 |Day 16| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 17| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 17| :star: (39645.53ms) | :star: (guessed the answer)|
 |Day 18| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 19| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 20| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 20| :star: (2789.77ms) | :star: (26049.11ms) |
 |Day 21| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 22| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
