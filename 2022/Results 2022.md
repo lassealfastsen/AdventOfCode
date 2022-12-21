@@ -21,7 +21,7 @@
 |Day 18     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 19     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 20     | :star:                | 2789.77ms             | :star:                | 26049.11ms            |
-|Day 21     | :star:                | 246.40ms              | :star: [^4]           | :heavy_minus_sign:    |
+|Day 21     | :star:                | 246.40ms              | :star: [^4]           | :warning: 4380.97ms   |
 |Day 22     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 23     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 24     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
