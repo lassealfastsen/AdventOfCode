@@ -1,6 +1,6 @@
 # This is how it is going :-)
 |**Day**|**Part 1**|**Time**|**Part 2**|**Time**|
-|--|:--:|:--|:--:|--:|
+|--|:--:|:--|:--:|:--|
 |Day 1      | :star:                | 11.67ms               | :star:                | 11.19ms               |
 |Day 2      | :star:                | 12.57ms               | :star:                | 12.42ms               |
 |Day 3      | :star:                | 8.96ms                | :star:                | 7.72ms                |
@@ -21,7 +21,7 @@
 |Day 18     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 19     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 20     | :star:                | 2789.77ms             | :star:                | 26049.11ms            |
-|Day 21     | :star:                | 246.40ms              | :star: [^4]           | :warning: 4380.97ms   |
+|Day 21     | :star:                | 246.40ms              | :star: [^4]           | 4380.97ms :warning:   |
 |Day 22     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 23     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
 |Day 24     | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    | :heavy_minus_sign:    |
