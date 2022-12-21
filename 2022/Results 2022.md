@@ -1,6 +1,6 @@
 # This is how it is going :-)
 |**Day**|**Part 1**|**Time**|**Part 2**|**Time**|
-|--|:--:|:--|:--:|:--:|
+|--|:--:|:--|:--:|--:|
 |Day 1      | :star:                | 11.67ms | :star: (11.19ms)              ||
 |Day 2      | :star:                | 12.57ms | :star: (12.42ms)              ||
 |Day 3      | :star:                | 8.96ms | :star: (7.72ms)               ||
@@ -14,12 +14,12 @@
 |Day 11     | :star:                | 31.29ms | :star: (20017.72ms)           ||
 |Day 12 [^1]| :star:                | 322.90ms | :star: (318.26ms)             || 
 |Day 13     | :heavy_minus_sign:    || :heavy_minus_sign:            ||
-|Day 14     | :star:                | 367.89ms | :star: (12420.06ms)           ||
-|Day 15     | :star:                | 70894.96ms | :star: (~90mins)              ||
-|Day 16     | :heavy_minus_sign:    || :heavy_minus_sign:            ||
-|Day 17     | :star:                | 39645.53ms | :star: (guessed the answer)   ||
-|Day 18     | :heavy_minus_sign:    || :heavy_minus_sign:            ||
-|Day 19     | :heavy_minus_sign:    || :heavy_minus_sign:            ||
+|Day 14     | :star:                | 367.89ms              | :star: (12420.06ms)           ||
+|Day 15     | :star:                | 70894.96ms            | :star: (~90mins)              ||
+|Day 16     | :heavy_minus_sign:    |                       | :heavy_minus_sign:            ||
+|Day 17     | :star:                | 39645.53ms            | :star: (guessed the answer)   ||
+|Day 18     | :heavy_minus_sign:    |                       | :heavy_minus_sign:            ||
+|Day 19     | :heavy_minus_sign:    | :minus_sign:    | :heavy_minus_sign:            ||
 |Day 20     | :star:                | 2789.77ms | :star: (26049.11ms)           ||
 |Day 21     | :star:                | 246.40ms | :star: [^2]                   ||
 |Day 22     | :heavy_minus_sign:    || :heavy_minus_sign:            ||
