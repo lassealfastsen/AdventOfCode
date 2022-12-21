@@ -21,10 +21,11 @@
 |Day 18| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 19| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 20| :star: (2789.77ms) | :star: (26049.11ms) |
-|Day 21| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 21| :star: (246.40ms) | :star: [^2] |
 |Day 22| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 24| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 25| :heavy_minus_sign: | :heavy_minus_sign: |
 
 [^1]: Credit to https://github.com/rmbolger/AdventOfCode-PS/blob/main/2022/d12.ps1
+[^2]: Involved Guessing a bit for the human value, could be solved smarter but this works. just takes a little effort ;)
