@@ -12,6 +12,3 @@ for ($i = 1; $i -le 25; $i++) {
     New-Item  -ItemType File -Name "Day $i.ps1" -Path ".\$Year\Day $i"
     Add-Content -LiteralPath ".\$Year\Results $Year.md" -Value "|Day $i| :heavy_minus_sign: | :heavy_minus_sign: |"
 }
-
-
-New-Item -ItemType Directory -Name "Test" | New-Item -ItemType File -Name "Hello.txt"
