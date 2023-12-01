@@ -50,8 +50,6 @@ $reader = New-Object System.IO.StreamReader($pth)
 $numbers = @()
 
 
-$res = @()
-
 while ($null -ne ($read = $reader.ReadLine())) {
 
     $a = [regex]::Matches($read, '([0-9]|one|two|three|four|five|six|seven|eight|nine)').Value
