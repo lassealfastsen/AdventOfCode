@@ -31,10 +31,10 @@ while ($null -ne ($read = $reader.ReadLine())) {
 
     if ($validgame) {
         $validgames += $i
-        Write-Host $read -ForegroundColor Green
+        #Write-Host $read -ForegroundColor Green
     }
     else {
-        Write-Host $read -ForegroundColor Red
+        #Write-Host $read -ForegroundColor Red
     }
     $i++
 
@@ -87,6 +87,6 @@ while ($null -ne ($read = $reader.ReadLine())) {
 $reader.Close()
 $reader.Dispose()
 
-Write-Host "Part 1:"
+Write-Host "Part 2:"
 $games -join ' + ' | Invoke-Expression
 Write-Host "----------------"
