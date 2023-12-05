@@ -155,6 +155,8 @@ it works on the Sample input i even checked after each individual map, but for m
 
 correct answer is 50716416 my code returns 12950548
 
+Maybe i need to complete my maps so no value is unmodified.
+
 #>
 
 
