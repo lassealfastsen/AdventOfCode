@@ -209,12 +209,12 @@ $reader.Dispose()
 
 
 
-$seedRanges = [System.Collections.ArrayList]@()
+$Script:seedRanges = [System.Collections.ArrayList]@()
 
 for ($i = 0; $i -lt $seeds.Count; $i += 2) {
     $rngStart = [int64]$seeds[$i]
     $rngEnd = ($rngStart + [int64]$seeds[($i + 1)])
-    [void]$seedRanges.Add([PSCustomObject]@{
+    [void]$Script:seedRanges.Add([PSCustomObject]@{
             rngStart = [int64]$rngStart
             rngEnd   = [int64]$rngEnd
         })
@@ -224,64 +224,103 @@ for ($i = 0; $i -lt $seeds.Count; $i += 2) {
 Function Split-Ranges {
     Param($valuemaplist)
 
-    $seedrangecount = $seedRanges.Count
-    foreach ($valuemap in $valuemaplist) {
 
-        for ($i = 0; $i -lt $seedrangecount; $i++) {
-            $rng = $seedRanges[$i]
+    $queue = $Script:seedRanges 
+    $Script:seedRanges = [System.Collections.ArrayList]@()
+
+    $valuemapcount = $valuemaplist.count
+    $i = 0
+    while ($queue.Count -gt 0 -and $i -lt $valuemapcount) {
+
+
+
+        foreach ($valuemap in $valuemaplist) {
+            if ($queue.Count -eq 0) { continue }
+            $rng = $queue[0]
+            $queue.RemoveAt(0)
+            $i++
+
+
             if (($rng.rngStart -ge $valuemap.sourcestart) -and ($rng.rngEnd -le $valuemap.sourceend)) {
                 #entire range can be modified
-                
-                $seedRanges[$i].rngStart += $valuemap.offset
-                $seedRanges[$i].rngEnd += $valuemap.offset
-                return
+                [void]$Script:seedRanges.Add([PSCustomObject]@{
+                        rngStart = [int64]($rng.rngStart + $valuemap.offset)
+                        rngEnd   = [int64]($rng.rngEnd + $valuemap.offset)
+                    })
+                continue
             }
             elseif (($rng.rngStart -lt $valuemap.sourcestart) -and ($rng.rngEnd -ge $valuemap.sourcestart) -and ($rng.rngend -le $valuemap.sourceend)) {
                 #range is partially within the map (left)
-                $seedRanges[$i].rngEnd = ($valuemap.sourcestart - 1) #Before Map
 
-                [void]$seedRanges.Add([PSCustomObject]@{
+                [void]$queue.Add([PSCustomObject]@{
+                        rngStart = [int64]($rng.rngStart)
+                        rngEnd   = [int64]($valuemap.sourcestart - 1) 
+                    }) #Before Map - Add to queue
+
+                [void]$Script:seedRanges.Add([PSCustomObject]@{
                         rngStart = [int64]($valuemap.sourcestart + $valuemap.offset)
                         rngEnd   = [int64]($rng.rngEnd + $valuemap.offset)
                     }) #in Map
-                return
+                continue
             }
             elseif (($rng.rngStart -ge $valuemap.sourcestart) -and ($rng.rngStart -lt $valuemap.sourceend) -and ($rng.rngEnd -gt $valuemap.sourceend)) {
+                
+                             
                 #range is partially within the map (right)
-                $seedRanges[$i].rngStart = ($rng.rngStart + $valuemap.offset) #in Map
-                $seedRanges[$i].rngEnd = ($valuemap.sourceend + $valuemap.offset) #in Map
 
-                [void]$seedRanges.Add([PSCustomObject]@{
+                [void]$Script:seedRanges.Add([PSCustomObject]@{
+                        rngStart = [int64]($rng.rngStart + $valuemap.offset)
+                        rngEnd   = [int64]($valuemap.sourceend + $valuemap.offset)
+                    })
+
+
+                [void]$queue.Add([PSCustomObject]@{
                         rngStart = [int64]($valuemap.sourceend + 1)
                         rngEnd   = [int64]$rng.rngEnd
-                    }) #After Map
-                return
+                    }) #After Map - add to queue
+                continue
             }
             elseif (($rng.rngStart -lt $valuemap.sourcestart) -and ($rng.rngEnd -gt $valuemap.sourceend)) {
-                [void]$seedRanges.Add([PSCustomObject]@{
+                [void]$queue.Add([PSCustomObject]@{
                         rngStart = [int64]$rng.rngStart
                         rngEnd   = [int64]($valuemap.sourcestart - 1)
                     }) #Before Map
             
 
-                $seedRanges[$i].rngStart = ($valuemap.sourcestart + $valuemap.offset) #in Map
-                $seedRanges[$i].rngEnd = ($valuemap.sourceend + $valuemap.offset) #in Map
+                [void]$Script:seedRanges.Add([PSCustomObject]@{
+                        rngStart = [int64]($valuemap.sourcestart + $valuemap.offset) 
+                        rngEnd   = [int64]($valuemap.sourceend + $valuemap.offset)
+                    })
 
-                [void]$seedRanges.Add([PSCustomObject]@{
+
+                [void]$queue.Add([PSCustomObject]@{
                         rngStart = [int64]($valuemap.sourceend + 1)
                         rngEnd   = [int64]$rng.rngEnd
                     }) #After Map
-                return
+                continue
             }
-        }
-    } 
+            else {
+                [void]$queue.Add([PSCustomObject]@{
+                        rngStart = [int64]($rng.rngStart) 
+                        rngEnd   = [int64]($rng.rngEnd) 
+                    })
+                continue
+            }
 
+        }
+    }
+
+    while ($queue.Count -gt 0) {
+        $rng = $queue[0]
+        $queue.RemoveAt(0)
+        [void]$Script:seedRanges.Add($rng)
+    }
 
 }
 
+# $Script:seedRanges = [System.Collections.ArrayList]@()
 
-
-# [void]$seedRanges.Add([PSCustomObject]@{
+# [void]$Script:seedRanges.Add([PSCustomObject]@{
 #         rngStart = 82
 #         rngEnd   = 82
 #     })
@@ -301,5 +340,6 @@ Split-Ranges -valuemaplist ($categories["temperature-to-humidity map"].Ranges)
 
 Split-Ranges -valuemaplist ($categories["humidity-to-location map"].Ranges)
 
+$seedRanges
 
 $seedRanges.rngStart | Sort-Object | Select-Object -First 1
