@@ -153,6 +153,10 @@ After processing all of the maps sort the Seed Ranges by the lowest start value
 
 it works on the Sample input i even checked after each individual map, but for my real input it gives me a way too low value.
 
+Well it worked on the sample input until i messed with it..
+
+now it is FUBAR, i give up.
+
 correct answer is 50716416 my code returns 12950548
 
 Maybe i need to complete my maps so no value is unmodified.
