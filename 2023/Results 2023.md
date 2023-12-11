@@ -7,9 +7,9 @@
 |Day 4| :star: | :star: |
 |Day 5| :star: | :star: |
 |Day 6| :star: | :star: |
-|Day 7| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 8| :heavy_minus_sign: | :heavy_minus_sign: |
-|Day 9| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 7| :star: | :star: |
+|Day 8| :star: | :star: |
+|Day 9| :star: | :star: |
 |Day 10| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 11| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 12| :heavy_minus_sign: | :heavy_minus_sign: |
