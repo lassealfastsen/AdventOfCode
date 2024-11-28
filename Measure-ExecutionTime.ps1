@@ -12,12 +12,12 @@ for ($i = 1; $i -le $runs; $i++) {
 }
 
 $sum = 0
-$times | Foreach { $sum += $_}
+$times | ForEach-Object { $sum += $_}
 
 $avg = ($sum / $runs)
 
-$min = $times | Sort | Select -First 1
-$max = $times | Sort -Descending | Select -First 1
+$min = $times | Sort-Object | Select-Object -First 1
+$max = $times | Sort-Object -Descending | Select-Object -First 1
 
 "min: $min"
 "max: $max"
