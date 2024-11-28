@@ -10,3 +10,4 @@ This is my [Advent of Code](https://adventofcode.com/) Repository!
 [2022 Results](2022/Results%202022.md)
 
 [2023 Results](2023/Results%202023.md)
+[2024 Results](2024/Results%202024.md)
