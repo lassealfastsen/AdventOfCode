@@ -96,7 +96,7 @@ Function Fix-PrintOrder {
                         $pages = [int[]]$before + [int[]]$after
                         $print = $pages -join ','
                         $history += $print
-                        continue check
+                        #continue check
                     }
                 }
             }
@@ -110,7 +110,7 @@ Function Fix-PrintOrder {
                         $pages = $before + $after
                         $print = $pages -join ','
                         $history += $print
-                        continue check
+                        #continue check
                     }
                 }
             }
@@ -120,6 +120,8 @@ Function Fix-PrintOrder {
     return $pages
 
 }
+
+
 
 
 $invalidmiddles = 0
@@ -140,4 +142,3 @@ foreach ($print in $printQueue) {
 
 $middles
 $invalidmiddles
-

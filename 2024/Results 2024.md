@@ -5,7 +5,7 @@
 |Day 2| :star: | :star: |
 |Day 3| :star: | :star: |
 |Day 4| :star: | :star: |
-|Day 5| :heavy_minus_sign: | :heavy_minus_sign: |
+|Day 5 [^1]| :star: | :star: |
 |Day 6| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 7| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 8| :heavy_minus_sign: | :heavy_minus_sign: |
@@ -26,3 +26,6 @@
 |Day 23| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 24| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 25| :heavy_minus_sign: | :heavy_minus_sign: |
+
+
+[^1]: Slow as heck, but it works
