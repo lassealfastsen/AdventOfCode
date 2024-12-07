@@ -7,7 +7,7 @@
 |Day 4| :star: | :star: |
 |Day 5 [^1]| :star: | :star: |
 |Day 6 [^2]| :star: | :star: |
-|Day 7| :star: | :star: [^3]|
+|Day 7 [^3]| :star: | :star: |
 |Day 8| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 9| :heavy_minus_sign: | :heavy_minus_sign: |
 |Day 10| :heavy_minus_sign: | :heavy_minus_sign: |
@@ -30,4 +30,4 @@
 
 [^1]: Slow as heck, but it works
 [^2]: Credit [@BjornGrylls](https://github.com/BjornGrylls)
-[^3]: Part 2 was a stolen solution from this [Repo](https://github.com/soyjubilado/AdventOfCode/blob/main/2024/07/prog202407.py), i waited until after midnight to allow the others on the private leaderboard to solve it first.
+[^3]: Part 2 was a stolen solution from this [Repo](https://github.com/soyjubilado/AdventOfCode/blob/main/2024/07/prog202407.py), i waited until after midnight to allow the others on the private leaderboard to solve it first. 
