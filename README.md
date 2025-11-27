@@ -12,3 +12,5 @@ This is my [Advent of Code](https://adventofcode.com/) Repository!
 [2023 Results](2023/Results%202023.md)
 
 [2024 Results](2024/Results%202024.md)
+
+[2025 Results](2025/Results%202025.md)
