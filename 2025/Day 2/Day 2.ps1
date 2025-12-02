@@ -34,24 +34,21 @@ foreach ($idRange in $idRanges) {
                         if ($firstHalf -eq $secondHalf) {
                             Write-Host "*" -ForegroundColor Red -NoNewline
                             $p1InvalidIdSum += $i
+                        }
+                        #break
+                    }
+                    $maxLength = $str.Length / 2
+                    for ($j = 2; $j -le $maxLength; $j += 1) {
+                        if ((([regex]::Matches($str, $str.Substring(0, $j))).Count * $j) -eq $str.Length) {
                             $p2InvalidIdSum += $i
+                            # if ($str.Length / $j -eq 2) {
+                            #     $p1InvalidIdSum += $i
+                            # }
+                            Write-Host "*" -ForeGroundColor Red -NoNewLine
+                            #Write-Host $i -ForegroundColor Red
+                            break
                         }
                     }
-                    else {
-                        $maxLength = ($str.Length / 2) - 1 #-1 cause we already checked for ½
-                        for ($j = 2; $j -le $maxLength; $j += 1) {
-                            if ((([regex]::Matches($str, $str.Substring(0, $j))).Count * $j) -eq $str.Length) {
-                                $p2InvalidIdSum += $i
-                                # if ($str.Length / $j -eq 2) {
-                                #     $p1InvalidIdSum += $i
-                                # }
-                                Write-Host "*" -ForeGroundColor Red -NoNewLine
-                                #Write-Host $i -ForegroundColor Red
-                                break
-                            }
-                        }
-                    }
-                    
                 }
                 1 {
                     #uneven Lenght numbers must be in uneven length subparts
@@ -76,3 +73,5 @@ Write-Host "Part 1: $p1InvalidIdSum" -ForegroundColor Green
 Write-Host "Part 2: $p2InvalidIdSum" -ForegroundColor Green
 
 #p2 45283684600 too high --- Exclude single-digit numbers in part 2 only :S
+
+#This should be possible to optimize by skipping if P1 is invalid, so is part 2, but i can't seem to get that to work.
