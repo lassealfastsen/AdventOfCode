@@ -116,6 +116,65 @@ $reader.Dispose()
 
 
 
+###Below is CoPilot's solution for Part 2
+###It is more efficient and elegant than my brute-force nested loops above
+$reader = New-Object System.IO.StreamReader('C:\git\AdventOfCode\2025\Day 3\input.txt')
+
+$joltSum = [bigint]0
+
+function Get-MaxSubsequenceNumber {
+    param(
+        [string]$line,
+        [int]$length
+    )
+
+    $n = $line.Length
+    if ($n -lt $length) { return $null }
+
+    # precompute non-zero counts from each position to the end (for digits 1-9)
+    $nonZeroCountsFromEnd = New-Object int[] ($n + 1)
+    $nonZeroCountsFromEnd[$n] = 0
+    for ($i = $n - 1; $i -ge 0; $i--) {
+        $nonZeroCountsFromEnd[$i] = $nonZeroCountsFromEnd[$i + 1] + ([int]($line[$i] -ne '0'))
+    }
+
+    $pos = -1
+    $result = New-Object System.Collections.Generic.List[string]
+
+    for ($k = 0; $k -lt $length; $k++) {
+        $placed = $false
+        $remainingNeeded = $length - ($k + 1)
+        for ($d = 9; $d -ge 1; $d--) {
+            $dChar = $d.ToString()
+            $idx = $line.IndexOf($dChar, $pos + 1)
+            if ($idx -ge 0) {
+                $availableAfter = $nonZeroCountsFromEnd[$idx + 1]
+                if ($availableAfter -ge $remainingNeeded) {
+                    $result.Add($dChar)
+                    $pos = $idx
+                    $placed = $true
+                    break
+                }
+            }
+        }
+        if (-not $placed) { return $null }
+    }
+
+    return -join $result
+}
+
+while ($null -ne ($read = $reader.ReadLine())) {
+    $numStr = Get-MaxSubsequenceNumber -line $read -length 2
+    if ($numStr) {
+        $joltSum += [bigint]::Parse($numStr)
+    }
+}
+
+$joltSum
+
+$reader.Close()
+$reader.Dispose()
+
 
 
 
