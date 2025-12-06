@@ -75,14 +75,13 @@ $colIdx = 0
 $cols = @()
 
 
-for ($x = 0; $x -lt $p2WorksheetLength; $x++) {
-    "$x"
+for ($x = 0; $x -le $p2WorksheetLength; $x++) {
     $col = ""    
     for ($y = 0; $y -lt $p2Worksheet.Count; $y++) {
         $col = $col + $p2Worksheet[$y][$x]
     }
 
-    if ($col -match "\d") {
+    if ($col -match "\d" -and $x -ne ($p2WorksheetLength)) {
         $cols += $col
     }
     else {
@@ -94,6 +93,6 @@ for ($x = 0; $x -lt $p2WorksheetLength; $x++) {
     }
     <# Action that will repeat until the condition is met #>
 }
-$p2Sum += ($cols -join " $($operations[$colIdx]) " | Invoke-Expression)
+#$p2Sum += ($cols -join " $($operations[$colIdx]) " | Invoke-Expression)
 
 Write-Host "Part 2: $p2sum"
