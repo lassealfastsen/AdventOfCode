@@ -30,11 +30,10 @@ Class JunctionBox {
     [guid]$circuitID
     [guid[]]$circuits
     [int]$connections 
-
-
     [int]$nearestNeibourDistance = [int]::MaxValue
     [JunctionBox]$nearestNeighbour
 
+    
     JunctionBox ($X, $Y, $Z) {
         $this.ID = (New-Guid).Guid
         $this.x = $X
