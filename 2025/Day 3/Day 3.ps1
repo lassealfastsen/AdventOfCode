@@ -164,7 +164,7 @@ function Get-MaxSubsequenceNumber {
 }
 
 while ($null -ne ($read = $reader.ReadLine())) {
-    $numStr = Get-MaxSubsequenceNumber -line $read -length 2
+    $numStr = Get-MaxSubsequenceNumber -line $read -length 12
     if ($numStr) {
         $joltSum += [bigint]::Parse($numStr)
     }
